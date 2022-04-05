@@ -1,0 +1,46 @@
+{
+    "inbounds": [
+        {
+            "listen": "/etc/caddy/vless", 
+            "protocol": "vless", 
+            "settings": {
+                "clients": [
+                    {
+                        "id": "$UUID"
+                    }
+                ], 
+                "decryption": "none"
+            }, 
+            "streamSettings": {
+                "network": "ws", 
+                "wsSettings": {
+                    "path": "/api-vless"
+                }
+            }
+        },
+		{
+      "listen": "/etc/caddy/vmess",
+      "protocol": "vmess",
+      "settings": {
+        "clients": [
+          {
+            "id": "$UUID",
+            "alterId": 64
+          }
+        ],
+        "disableInsecureEncryption": true
+      },
+      "streamSettings": {
+        "network": "ws",
+        "wsSettings": {
+          "path": "/api-vmess"
+        }
+      }
+    }
+    ], 
+    "outbounds": [
+        {
+            "protocol": "freedom"
+        }
+    ]
+}

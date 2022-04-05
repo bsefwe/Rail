@@ -1,0 +1,26 @@
+{
+    "name": "XRay-Web",
+    "description": "Deploy Xray-Web on Heroku.",
+    "keywords": ["XRay-Web"],
+    "env": {
+        "UUID": {
+            "description": "XRay UUID",
+            "value": "988d75e5-a72c-48a6-9488-62ff1bbba8d8"
+        },
+        "WebPage": {
+            "description": "自定义Web页面",
+            "value": "https://raw.githubusercontent.com/wanjiji/heroku-xray-web/main/archive/web.zip"
+        },
+        "CaddyConfig": {
+            "description": "自定义Caddy配置文件",
+            "value": "https://raw.githubusercontent.com/wanjiji/heroku-xray-web/main/etc/Caddyfile"
+        },
+        "XRayConfig": {
+            "description": "自定义XRay配置文件",
+            "value": "https://raw.githubusercontent.com/wanjiji/heroku-xray-web/main/etc/xray.json"
+        }
+    },
+    "website": "https://github.com/wanjiji/heroku-xray-web",
+    "repository": "https://github.com/wanjiji/heroku-xray-web",
+    "stack": "container"
+}
